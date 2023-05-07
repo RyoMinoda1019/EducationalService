@@ -1,3 +1,5 @@
 export const LaptopMainLayoutStructure = {
-    LaptopHeight: 60
+    LaptopHeight: 65,
+    IconWidth: 65,
+    LogoWidth: 120,
 }
