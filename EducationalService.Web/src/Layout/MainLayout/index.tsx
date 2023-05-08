@@ -1,6 +1,6 @@
-import { MainLayoutType } from "./Enum/MainLayoutType";
+import { MainLayoutType } from "./Consts/MainLayoutType";
 import { GuestMainLayout } from "./GuestLayout";
-import { LayoutInnerContents } from "./Types/LayoutInnerContents";
+import { LayoutInnerContents } from "../Types/LayoutInnerContents";
 import { MainLayoutProps } from "./Types/MainLayoutProps";
 
 export const MainLayout = ({ props, children }: { props: MainLayoutProps, children: LayoutInnerContents }) => {

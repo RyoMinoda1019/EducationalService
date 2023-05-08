@@ -1,5 +1,5 @@
 import GuestHomePage from "../Pages/Guest/GuestHomePage";
-import SignInPage from "../Pages/Guest/SignInPage";
+import LogInPage from "../Pages/Guest/LogInPage";
 import SignUpPage from "../Pages/Guest/SignUpPage";
 import MemberHomePage from "../Pages/Member/MemberHomePage";
 import GuestErrorPage from "../Pages/Util/GuestErrorPage";
@@ -17,7 +17,7 @@ class Page {
     static All(): Array<Page> {
         return [
             new Page("/", GuestHomePage()),
-            new Page("/signin", SignInPage()),
+            new Page("/login", LogInPage()),
             new Page("/signup", SignUpPage()),
             new Page("/home", MemberHomePage())
         ];

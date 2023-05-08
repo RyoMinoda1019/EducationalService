@@ -3,5 +3,6 @@ export const Palette = {
     DarkBlue: "#0C2D48",
     Blue: "#2E8BC0",
     BabyBlue: "#B1D4E0",
+    PaleBabyBlue: "#E7F2F8",
     White: "#FDFDFD"
 }

@@ -1,5 +1,5 @@
 import { MainLayout } from "../../Layout/MainLayout";
-import { MainLayoutType } from "../../Layout/MainLayout/Enum/MainLayoutType";
+import { MainLayoutType } from "../../Layout/MainLayout/Consts/MainLayoutType";
 import { MainLayoutProps } from "../../Layout/MainLayout/Types/MainLayoutProps";
 
 const GuestHomePage = (): React.ReactElement => {
