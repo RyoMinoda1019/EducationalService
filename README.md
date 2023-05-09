@@ -5,4 +5,6 @@ Web
     - MUI
 
 API
-- C#
+- C#/.NET 6.0
+- Librarry
+    - EF Core

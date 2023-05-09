@@ -2,7 +2,7 @@
 
 namespace EducationalService.API.Models
 {
-    public class UserRole : TransactionEntity
+    public class UserRole : TransactionEntity<UserRole>
     {
         public string RoleName { get; set; } = string.Empty;
 
