@@ -1,6 +1,8 @@
 
 
 using EducationalService.API.Models;
+using EducationalService.API.Repositories;
+using EducationalService.API.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -18,6 +20,8 @@ var configuration = builder.Configuration;
 var connectionString = configuration.GetSection("ConnectionStrings:PostgreSQL").Value;
 
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connectionString));
+
+builder.Services.AddTransient<IGroupAccountRepository, GroupAccountRepository>();
 
 var app = builder.Build();
 

@@ -8,13 +8,15 @@ namespace EducationalService.API.Models
 
         public String UserPassword { get; set; } = "";
 
+        public String Nickname { get; set; } = "";
+
         public Guid GroupAccountId { get; set; } = Guid.NewGuid();
 
         public GroupAccount? GroupAccount { get; set; }
 
         public static List<UserAccount> SampleUserAccounts => new List<UserAccount>()
         {
-            new UserAccount() { Id = Guid.Parse("a61a6b8f-6ca8-467e-a10a-30d4724122de"), UserId = "SampleId", UserPassword = "Password", GroupAccountId = GroupAccount.SampleGroupAccounts.First().Id },
+            new UserAccount() { Id = Guid.Parse("a61a6b8f-6ca8-467e-a10a-30d4724122de"), Nickname="Sam Ple", UserId = "SampleId", UserPassword = "Password", GroupAccountId = GroupAccount.SampleGroupAccounts.First().Id },
         };
 
         public override List<UserAccount> Seeds() => SampleUserAccounts;
