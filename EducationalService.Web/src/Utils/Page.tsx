@@ -3,6 +3,7 @@ import LogInPage from "../Pages/Guest/LogInPage";
 import SignUpPage from "../Pages/Guest/SignUpPage";
 import MemberHomePage from "../Pages/Member/MemberHomePage";
 import GuestErrorPage from "../Pages/Util/GuestErrorPage";
+import { Routes } from "./Routes";
 
 class Page {
     Path: string = "";
@@ -16,10 +17,10 @@ class Page {
 
     static All(): Array<Page> {
         return [
-            new Page("/", GuestHomePage()),
-            new Page("/login", LogInPage()),
-            new Page("/signup", SignUpPage()),
-            new Page("/home", MemberHomePage())
+            new Page(Routes.GuestHome, GuestHomePage()),
+            new Page(Routes.GuestLogin, LogInPage()),
+            new Page(Routes.GuestSignup, SignUpPage()),
+            new Page(Routes.MemberHome, MemberHomePage())
         ];
     }
 }

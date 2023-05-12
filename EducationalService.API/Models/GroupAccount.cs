@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EducationalService.API.Models
 {
-    public class GroupAccount: TransactionEntity<GroupAccount>
+    public class GroupAccount : TransactionEntity<GroupAccount>
     {
         public String Name { get; set; } = "";
 

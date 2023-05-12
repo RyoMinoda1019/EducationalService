@@ -22,7 +22,8 @@ namespace EducationalService.API.Controllers
             if (Guid.TryParse(groupId, out var groupGuid))
             {
                 var group = await _groupAccountRepository.GetGroupAccountAsync(groupGuid);
-                return Ok(new GetGroupResponse(group));
+                var responseGroup = new GetGroup(group);
+                return Ok(new Response<GetGroup>(responseGroup));
             } 
             return Ok();
         }

@@ -1,3 +1,4 @@
 export type MainLayoutProps = {
-    layoutType: string
+    layoutType: string;
+    sideMenuWidth: number | null;
 }

@@ -1,3 +1,4 @@
 export const FooterType = {
-    Guest: "Guest"
+    Guest: "Guest",
+    Member: "Member",
 }

@@ -1,11 +1,12 @@
 import { Stack } from "@mui/material";
-import { FooterProps } from "./Types/FooterProps";
-import { SxT } from "../../Utils/CssProps";
-import { Palette } from "../../Utils/Palette";
-import { FooterRow } from "./Molecules/FooterRow";
-import { FooterRowProps } from "./Molecules/Types/FooterRowProsp";
-import { Linker } from "../../Utils/Linker";
-import { useWindowSize } from "../../Utils/WindowSize";
+import { FooterProps } from "../Types/FooterProps";
+import { SxT } from "../../../Utils/CssProps";
+import { Palette } from "../../../Utils/Palette";
+import { FooterRow } from "./FooterRow";
+import { FooterRowProps } from "./Types/FooterRowProsp";
+import { Linker } from "../../../Utils/Linker";
+import { useWindowSize } from "../../../Utils/WindowSize";
+import { Routes } from "../../../Utils/Routes";
 
 export const GuestFooter = ({ props }: { props: FooterProps }) => {
     const { footerHeight } = props;
@@ -22,18 +23,24 @@ export const GuestFooter = ({ props }: { props: FooterProps }) => {
     }
     const rowCount = 3;
     const footerRow1: FooterRowProps = {
-        subject: null,
         items: [
-            { text: "Home", jumpTo: "/" },
-            { text: "Log In", jumpTo: "/login" },
-            { text: "Sign Up", jumpTo: "/signup" },
+            { text: "Home", jumpTo: Routes.GuestHome },
+            { text: "Log In", jumpTo: Routes.GuestLogin },
+            { text: "Sign Up", jumpTo: Routes.GuestSignup },
         ],
         width: (windowWidth - sidePadding * 8) / rowCount,
         height: (windowWidth - tbPadding * 8)
     }
+    const footerRow2: FooterRowProps = {
+        ...footerRow1,
+        items: [
+            { text: "Home", jumpTo: Routes.MemberHome },
+        ],
+    }
     return (
         <Stack direction="row" sx={exteriorSx}>
             <FooterRow props={footerRow1} />
+            <FooterRow props={footerRow2} />
         </Stack>
     );
 }

@@ -1,12 +1,12 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { FooterRowProps } from "./Types/FooterRowProsp";
-import { SxT, centerProps } from "../../../Utils/CssProps";
+import { SxT, centerProps, linkNoBorderProps } from "../../../Utils/CssProps";
 import { FontSize } from "../../../Utils/Font";
 import CircleIcon from '@mui/icons-material/Circle';
 import { Link } from "react-router-dom";
 
 export const FooterRow = ({ props }: { props: FooterRowProps }) => {
-    const { subject, items, width } = props;
+    const { items, width } = props;
     const stackSx: SxT = {
         width, 
     }
@@ -18,8 +18,8 @@ export const FooterRow = ({ props }: { props: FooterRowProps }) => {
         ...centerProps
     }
     const pointIconSx: SxT = {
-        width: 5,
-        height: 5
+        width: 3,
+        height: 3
     }
     return (
         <Stack direction="column" sx={stackSx}>
@@ -30,7 +30,7 @@ export const FooterRow = ({ props }: { props: FooterRowProps }) => {
                             <Box sx={iconOuterSx}>
                                 <CircleIcon sx={pointIconSx} />
                             </Box>
-                            <Link to={x.jumpTo}>
+                            <Link to={x.jumpTo} style={linkNoBorderProps}>
                                 <Typography fontSize={FontSize.small}>
                                     {x.text}
                                 </Typography>

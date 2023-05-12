@@ -1,22 +1,21 @@
-import { Box, Stack } from "@mui/material";
-
-import { LayoutInnerContents } from "../Types/LayoutInnerContents";
-import { MainLayoutProps } from "./Types/MainLayoutProps";
-import { Palette } from "../../Utils/Palette";
-import { SxT } from "../../Utils/CssProps";
-import { TopMenu, TopMenuProps } from "../../Components/TopMenu";
-import { LaptopMainLayoutStructure } from "./Consts/LaptopMainLayoutStructure";
+import { Stack, Box } from "@mui/material";
 import { useState } from "react";
-import { useWindowSize } from "../../Utils/WindowSize";
-import { Footer } from "../../Components/Footer";
-import { FooterProps } from "../../Components/Footer/Types/FooterProps";
-import { FooterType } from "../../Components/Footer/Consts/FooterType";
+import { Footer } from "../../../Components/Footer";
+import { FooterType } from "../../../Components/Footer/Consts/FooterType";
+import { FooterProps } from "../../../Components/Footer/Types/FooterProps";
+import { TopMenuProps, TopMenu } from "../../../Components/TopMenu";
+import { TopMenuType } from "../../../Components/TopMenu/Consts/TopMenuType";
+import { SxT } from "../../../Utils/CssProps";
+import { useWindowSize } from "../../../Utils/WindowSize";
+import { LayoutInnerContents } from "../../Types/LayoutInnerContents";
+import { LaptopMainLayoutStructure } from "../Consts/LaptopMainLayoutStructure";
+import { MainLayoutProps } from "../Types/MainLayoutProps";
+import { Palette } from "../../../Utils/Palette";
 
 export const GuestMainLayout = ({ props, children }: { props: MainLayoutProps, children: LayoutInnerContents }) => {
     const { LaptopTopMenuHeight, LogoWidth, IconWidth, LaptopFooterHeight } = LaptopMainLayoutStructure;
     const { windowHeight, windowWidth } = useWindowSize();
     const [ topMenuHeight, setTopMenuHeight ] = useState(LaptopTopMenuHeight);
-    
     const exteriorSx: SxT = {
         overflow: "hidden",
     }
@@ -31,7 +30,8 @@ export const GuestMainLayout = ({ props, children }: { props: MainLayoutProps, c
     const topMenuProps: TopMenuProps = {
         menuHeight: topMenuHeight,
         iconWidth: IconWidth,
-        logoWidth: LogoWidth
+        logoWidth: LogoWidth,
+        type: TopMenuType.Guest
     }
     const footerProps: FooterProps = {
         footerHeight: LaptopFooterHeight,
@@ -49,3 +49,4 @@ export const GuestMainLayout = ({ props, children }: { props: MainLayoutProps, c
         </Stack>
     );
 }
+
