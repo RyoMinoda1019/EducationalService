@@ -2,7 +2,7 @@ import { MainLayout } from "../../Layout/MainLayout";
 import { MainLayoutType } from "../../Layout/MainLayout/Consts/MainLayoutType";
 import { MainLayoutProps } from "../../Layout/MainLayout/Types/MainLayoutProps";
 
-const SettingPage = (): React.ReactElement => {
+const MemberSchedulePage = () => {
     const layoutProps: MainLayoutProps ={
         layoutType: MainLayoutType.Member
     }
@@ -13,4 +13,4 @@ const SettingPage = (): React.ReactElement => {
     );
 }
 
-export default SettingPage;
+export default MemberSchedulePage;

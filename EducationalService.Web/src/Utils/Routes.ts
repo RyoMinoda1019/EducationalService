@@ -2,5 +2,9 @@ export const Routes = {
     GuestHome: "/",
     GuestLogin: "/login",
     GuestSignup: "/signup",
-    MemberHome: "/member"
+    MemberHome: "/home",
+    MemberTeacher: "/teachers",
+    MemberStudent: "/students",
+    MemberSchedule: "/schedules",
+    MemberSetting: "/setting",
 }

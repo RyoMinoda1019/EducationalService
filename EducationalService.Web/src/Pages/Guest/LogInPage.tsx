@@ -14,8 +14,7 @@ const LogInPage = (): React.ReactElement => {
     const formHeight = 430;
     const titleHeight = 70;
     const layoutProps: MainLayoutProps = {
-        layoutType: MainLayoutType.Guest,
-        sideMenuWidth: null
+        layoutType: MainLayoutType.Guest
     }
     const stackSx: SxT = {
         width: windowWidth,

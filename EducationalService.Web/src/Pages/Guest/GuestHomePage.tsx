@@ -4,8 +4,7 @@ import { MainLayoutProps } from "../../Layout/MainLayout/Types/MainLayoutProps";
 
 const GuestHomePage = (): React.ReactElement => {
     const layoutProps: MainLayoutProps = {
-        layoutType: MainLayoutType.Guest,
-        sideMenuWidth: null
+        layoutType: MainLayoutType.Guest
     }
     return (
         <MainLayout props={layoutProps}>

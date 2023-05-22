@@ -10,8 +10,7 @@ import { SxT, centerProps } from "../../Utils/CssProps";
 const SignUpPage = (): React.ReactElement => {
     const { windowWidth } = useWindowSize();
     const layoutProps: MainLayoutProps = {
-        layoutType: MainLayoutType.Guest,
-        sideMenuWidth: null
+        layoutType: MainLayoutType.Guest
     }
     const outerStack: SxT = {
         marginTop: 5,
