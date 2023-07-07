@@ -1,1 +1,1 @@
-export const PageSideMargin: number = 40;
+export const PageSideMargin: number = 60;

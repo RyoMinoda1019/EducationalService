@@ -41,13 +41,13 @@ export const TopMenuLayout = ({ props }: { props: TopMenuLayoutProps }) => {
                     </Typography>
                 </Box>
                 <Box sx={marginSx}></Box>
-                {iconTitles.map((x) => {
+                {iconTitles.map((x, i) => {
                     const iconProps: TopMenuIconProps = {
                         width: iconWidth,
                         height,
                         ...x,
                     }
-                    return <TopMenuIcon props={iconProps} />;
+                    return <TopMenuIcon props={iconProps} key={i} />;
                 })}
             </Stack>
         </Box>

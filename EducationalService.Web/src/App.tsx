@@ -6,6 +6,7 @@ import { SideMenuType } from "./Components/SideMenu/Consts/SideMenuType";
 
 const App = () => {
   const [ sideMenuWidth, setSideMenuWidth ] = useState(SideMenuType.Icon);
+  
   const pages: RouteObject[] = Page.All().map((page): RouteObject => {
     return {
       path: page.Path,
@@ -13,6 +14,8 @@ const App = () => {
       errorElement: page.Error,
     };
   });
+
+
   const router = createBrowserRouter(pages);
 
   return (
