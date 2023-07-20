@@ -1,4 +1,4 @@
-export class SearchResultMeta {
+export class SearchResultMetaDomain {
     CountInThisPage: number;
     Page: number;
     TotalPage: number;
@@ -14,6 +14,6 @@ export class SearchResultMeta {
     }
 
     static get defaultData() {
-        return new SearchResultMeta(0, 1, 1, 0, 0);
+        return new SearchResultMetaDomain(0, 1, 1, 0, 0);
     } 
 }

@@ -1,16 +1,18 @@
 import { Stack } from "@mui/material";
-import { MainLayout } from "../../Layout/MainLayout";
+import { MainLayout, MainLayoutProps } from "../../Layout/MainLayout";
 import { MainLayoutType } from "../../Layout/MainLayout/Consts/MainLayoutType";
-import { MainLayoutProps } from "../../Layout/MainLayout/Types/MainLayoutProps";
 import { AccountFormHeadline, AccountFormHeadlineProps } from "../../Components/Headline/AccountFormHeadline";
 import { useWindowSize } from "../../Utils/WindowSize";
 import { SignUpForm, SignUpFormProps } from "../../Components/Form/SignUpForm";
 import { SxT, centerProps } from "../../Utils/CssProps";
+import { Routes } from "../../Utils/Routes";
 
 const SignUpPage = (): React.ReactElement => {
     const { windowWidth } = useWindowSize();
     const layoutProps: MainLayoutProps = {
-        layoutType: MainLayoutType.Guest
+        layoutType: MainLayoutType.Guest,
+        currentPath: Routes.GuestSignUp,
+        breadcrumbPaths: null
     }
     const outerStack: SxT = {
         marginTop: 5,

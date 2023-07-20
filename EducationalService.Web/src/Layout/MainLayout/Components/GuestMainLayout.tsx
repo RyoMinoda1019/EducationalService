@@ -9,8 +9,8 @@ import { SxT } from "../../../Utils/CssProps";
 import { useWindowSize } from "../../../Utils/WindowSize";
 import { LayoutInnerContents } from "../../Types/LayoutInnerContents";
 import { LaptopMainLayoutStructure } from "../Consts/LaptopMainLayoutStructure";
-import { MainLayoutProps } from "../Types/MainLayoutProps";
 import { Palette } from "../../../Utils/Palette";
+import { MainLayoutProps } from "..";
 
 export const GuestMainLayout = ({ props, children }: { props: MainLayoutProps, children: LayoutInnerContents }) => {
     const { LaptopTopMenuHeight, LogoWidth, IconWidth, LaptopFooterHeight } = LaptopMainLayoutStructure;

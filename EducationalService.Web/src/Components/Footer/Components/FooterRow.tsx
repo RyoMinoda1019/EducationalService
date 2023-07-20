@@ -23,9 +23,9 @@ export const FooterRow = ({ props }: { props: FooterRowProps }) => {
     }
     return (
         <Stack direction="column" sx={stackSx}>
-            {items.map(x => {
+            {items.map((x, i) => {
                 return (
-                    <Box sx={listItemSx}>
+                    <Box sx={listItemSx} key={i}>
                         <Stack direction="row">
                             <Box sx={iconOuterSx}>
                                 <CircleIcon sx={pointIconSx} />

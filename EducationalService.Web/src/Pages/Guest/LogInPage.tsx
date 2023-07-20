@@ -1,12 +1,12 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { MainLayout } from "../../Layout/MainLayout";
+import { MainLayout, MainLayoutProps } from "../../Layout/MainLayout";
 import { MainLayoutType } from "../../Layout/MainLayout/Consts/MainLayoutType";
-import { MainLayoutProps } from "../../Layout/MainLayout/Types/MainLayoutProps";
 import { FontSize } from "../../Utils/Font";
 import { LogInForm, LogInFormProps } from "../../Components/Form/LogInForm";
 import { SxT, centerProps } from "../../Utils/CssProps";
 import { useWindowSize } from "../../Utils/WindowSize";
 import { AccountFormHeadline, AccountFormHeadlineProps } from "../../Components/Headline/AccountFormHeadline";
+import { Routes } from "../../Utils/Routes";
 
 const LogInPage = (): React.ReactElement => {
     const { windowHeight, windowWidth } = useWindowSize();
@@ -14,7 +14,9 @@ const LogInPage = (): React.ReactElement => {
     const formHeight = 430;
     const titleHeight = 70;
     const layoutProps: MainLayoutProps = {
-        layoutType: MainLayoutType.Guest
+        layoutType: MainLayoutType.Guest,
+        currentPath: Routes.GuestLogIn,
+        breadcrumbPaths: null
     }
     const stackSx: SxT = {
         width: windowWidth,

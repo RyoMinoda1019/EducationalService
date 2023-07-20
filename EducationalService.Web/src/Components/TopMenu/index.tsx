@@ -18,8 +18,8 @@ export const TopMenu = ({ props }: { props: TopMenuProps }) => {
     switch (type) {
         case TopMenuType.Guest:
             iconTitles = [
-                { title: "Log In", jumpTo: Routes.GuestLogin, Icon: LoginIcon },
-                { title: "Sign Up", jumpTo: Routes.GuestSignup, Icon: AddIcon },  
+                { title: "Log In", jumpTo: Routes.GuestLogIn, Icon: LoginIcon },
+                { title: "Sign Up", jumpTo: Routes.GuestSignUp, Icon: AddIcon },  
             ];
             break;
         case TopMenuType.Member:

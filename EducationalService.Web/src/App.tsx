@@ -3,9 +3,12 @@ import Page from "./Utils/Page";
 import { useState } from "react";
 import { SideMenuWidthContext } from "./Context/SideMenuWidthContext";
 import { SideMenuType } from "./Components/SideMenu/Consts/SideMenuType";
+import { SettingContext } from "./Context/SettingContext";
+import { SettingDomain } from "./Models/Domain/SettingDomain";
 
 const App = () => {
   const [ sideMenuWidth, setSideMenuWidth ] = useState(SideMenuType.Icon);
+  const [ setting, setSetting ] = useState(SettingDomain.default);
   
   const pages: RouteObject[] = Page.All().map((page): RouteObject => {
     return {
@@ -19,9 +22,11 @@ const App = () => {
   const router = createBrowserRouter(pages);
 
   return (
-    <SideMenuWidthContext.Provider value={{ sideMenuWidth, setSideMenuWidth }}>
-      <RouterProvider router={router} />
-    </SideMenuWidthContext.Provider>
+    <SettingContext.Provider value={{ setting, setSetting }}>
+      <SideMenuWidthContext.Provider value={{ sideMenuWidth, setSideMenuWidth }}>
+        <RouterProvider router={router} />
+      </SideMenuWidthContext.Provider>
+    </SettingContext.Provider>
   );
 }
 

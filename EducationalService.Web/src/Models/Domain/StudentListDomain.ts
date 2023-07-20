@@ -1,17 +1,17 @@
-import { ListColumnDomain } from "./ListColumnDomain";
+import { FlexibleColumnDomain } from "./FlexibleColumnDomain";
 import { SearchConditionDomain } from "./SearchConditionDomain";
-import { SearchResultMeta } from "./SearchResultMeta";
+import { SearchResultMetaDomain } from "./SearchResultMetaDomain";
 
 export type StudentListDomain = {
     Students: StudentListItemDomain[],
-    SearchResultMeta: SearchResultMeta,
-    Columns: ListColumnDomain[],
+    SearchResultMeta: SearchResultMetaDomain,
+    Columns: FlexibleColumnDomain[],
     SearchCondition: SearchConditionDomain,
 }
 
 export const defaultStudentListDomain: StudentListDomain = {
     Students: [],
-    SearchResultMeta: SearchResultMeta.defaultData,
+    SearchResultMeta: SearchResultMetaDomain.defaultData,
     Columns: [],
     SearchCondition: SearchConditionDomain.defaultSearchCondition,
 }
@@ -23,14 +23,14 @@ export class StudentListItemDomain {
     Index: number;
     Classroom: string;
     EnteredAt: Date | null;
-    GraduatedAt: Date | null;
+    RemovedAt: Date | null;
     Note: string;
     CustomizeColumn: object;
 
 
     constructor(id: string, name: string, no: string, 
         note: string, index: number, classroom: string,
-        enteredAt: Date | null, graduatedAt: Date | null
+        enteredAt: Date | null, removedAt: Date | null
     ) {
         this.Id = id;
         this.Name = name;
@@ -39,8 +39,8 @@ export class StudentListItemDomain {
         this.Index = index;
         this.Classroom = classroom;
         this.EnteredAt = enteredAt;
-        this.GraduatedAt = graduatedAt;
-        this.CustomizeColumn = { "picturePath": "" };
+        this.RemovedAt = removedAt;
+        this.CustomizeColumn = {  };
     }
 
     getValue(variant: string) : string {
@@ -78,7 +78,7 @@ export class StudentListItemDomain {
             "Classroom": this.Classroom,
             "Note": this.Note,
             "EnteredAt": this.EnteredAt,
-            "GraduatedAt": this.GraduatedAt,
+            "RemovedAt": this.RemovedAt,
             "CustomizeColumn": this.CustomizeColumn
         }
     }

@@ -11,10 +11,11 @@ import { SideMenuListItems } from "./Consts/SideMenuListItems";
 
 export type SideMenuProps = {
     height: number;
+    currentPath: string,
 }
 
 export const SideMenu = ({ props }: { props: SideMenuProps }) => {
-    const { height } = props;
+    const { height, currentPath } = props;
     const { sideMenuWidth, setSideMenuWidth } = useContext(SideMenuWidthContext);
 
     const outerBoxSx: SxT = {
@@ -72,6 +73,7 @@ export const SideMenu = ({ props }: { props: SideMenuProps }) => {
                     const itemProps: SideMenuItemProps = {
                         sideMenuWidth,
                         sideMenuListItem: x,
+                        currentPath,
                     }
                     return <SideMenuItem key={i} props={itemProps} />
                 })}

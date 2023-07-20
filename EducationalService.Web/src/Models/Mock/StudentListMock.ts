@@ -1,6 +1,6 @@
-import { ListColumnDomain } from "../Domain/ListColumnDomain";
+import { FlexibleColumnDomain } from "../Domain/FlexibleColumnDomain";
 import { SearchConditionDomain } from "../Domain/SearchConditionDomain";
-import { SearchResultMeta } from "../Domain/SearchResultMeta";
+import { SearchResultMetaDomain } from "../Domain/SearchResultMetaDomain";
 import { StudentListDomain, StudentListItemDomain } from "../Domain/StudentListDomain";
 
 const  student1: StudentListItemDomain = new StudentListItemDomain("fe371924-fc50-11ed-be56-0242ac120002", "Herb Chase", "1", "", 0,"1-1", new Date(), new Date())
@@ -24,13 +24,13 @@ const  student18: StudentListItemDomain = new StudentListItemDomain("fe3738a0-fc
 const  student19: StudentListItemDomain = new StudentListItemDomain("fe373a08-fc50-11ed-be56-0242ac120002", "Toney Bauer", "2", "", 18,"2-3", new Date(), new Date())
 const  student20: StudentListItemDomain = new StudentListItemDomain("fe373b7a-fc50-11ed-be56-0242ac120002", "Adrienne Howell", "3", "", 19,"2-3", new Date(), new Date())
 
-const searchResultMeta = new SearchResultMeta(20, 1, 4, 84, 3);
+const searchResultMeta = new SearchResultMetaDomain(20, 1, 4, 84, 3);
 
 export const studentListMock: StudentListDomain = {
     Students: [
         student1,student2,student3,student4,student5,student6,student7,student8,student9,student10,student11,student12,student13,student14,student15,student16,student17,student18,student19,student20
     ],
     SearchResultMeta: searchResultMeta,
-    Columns: ListColumnDomain.defaultStudentListColumns,
+    Columns: FlexibleColumnDomain.defaultStudentListColumns,
     SearchCondition: SearchConditionDomain.defaultSearchCondition,
 }

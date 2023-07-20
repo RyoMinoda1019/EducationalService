@@ -10,14 +10,14 @@ import { SideMenuListItem } from "../Consts/SideMenuListItems";
 export type SideMenuItemProps = {
     sideMenuListItem: SideMenuListItem,
     sideMenuWidth: number,
+    currentPath: string
 }
 
 export const SideMenuItem = ({ props }: { props: SideMenuItemProps }) => {
-    const { sideMenuListItem, sideMenuWidth } = props;
+    const { sideMenuListItem, sideMenuWidth, currentPath } = props;
     const { jumpTo, Icon, title } = sideMenuListItem;
-    const { pathname } = useLocation();
-    const bgcolor = pathname !== jumpTo ? "transparent" : Palette.PaleBabyBlue;
-    const color = pathname !== jumpTo ? Palette.White : Palette.DarkBlue;
+    const bgcolor = currentPath !== jumpTo ? "transparent" : Palette.PaleBabyBlue;
+    const color = currentPath !== jumpTo ? Palette.White : Palette.DarkBlue;
     const menuIconOuterSx: SxT = {
         width: SideMenuType.Icon,
         height: SideMenuType.Icon * 0.7,

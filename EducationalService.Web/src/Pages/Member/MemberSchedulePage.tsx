@@ -1,10 +1,14 @@
-import { MainLayout } from "../../Layout/MainLayout";
+import { MainLayout, MainLayoutProps } from "../../Layout/MainLayout";
 import { MainLayoutType } from "../../Layout/MainLayout/Consts/MainLayoutType";
-import { MainLayoutProps } from "../../Layout/MainLayout/Types/MainLayoutProps";
+import { Routes } from "../../Utils/Routes";
 
 const MemberSchedulePage = () => {
     const layoutProps: MainLayoutProps ={
-        layoutType: MainLayoutType.Member
+        layoutType: MainLayoutType.Member,
+        currentPath: Routes.MemberSchedule,
+        breadcrumbPaths: [
+            Routes.MemberSchedule
+        ],
     }
     return (
         <MainLayout props={layoutProps}>

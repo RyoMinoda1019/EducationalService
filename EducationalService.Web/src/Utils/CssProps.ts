@@ -4,7 +4,7 @@ import { Palette } from "./Palette";
 export type SxT = SxProps<Theme>
 
 export const transitionProps: SxT = {
-    transition: "1s"
+    transition: "0.5s"
 }
 
 export const centerProps: SxT = {

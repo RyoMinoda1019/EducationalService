@@ -25,8 +25,8 @@ export const GuestFooter = ({ props }: { props: FooterProps }) => {
     const footerRow1: FooterRowProps = {
         items: [
             { text: "Home", jumpTo: Routes.GuestHome },
-            { text: "Log In", jumpTo: Routes.GuestLogin },
-            { text: "Sign Up", jumpTo: Routes.GuestSignup },
+            { text: "Log In", jumpTo: Routes.GuestLogIn },
+            { text: "Sign Up", jumpTo: Routes.GuestSignUp },
         ],
         width: (windowWidth - sidePadding * 8) / rowCount,
         height: (windowWidth - tbPadding * 8)
@@ -34,7 +34,7 @@ export const GuestFooter = ({ props }: { props: FooterProps }) => {
     const footerRow2: FooterRowProps = {
         ...footerRow1,
         items: [
-            { text: "Home", jumpTo: Routes.MemberHome },
+            { text: "Dashboard", jumpTo: Routes.MemberDashboard },
         ],
     }
     return (

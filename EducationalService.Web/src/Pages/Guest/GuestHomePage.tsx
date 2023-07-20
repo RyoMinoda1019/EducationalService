@@ -1,10 +1,12 @@
-import { MainLayout } from "../../Layout/MainLayout";
+import { MainLayout, MainLayoutProps } from "../../Layout/MainLayout";
 import { MainLayoutType } from "../../Layout/MainLayout/Consts/MainLayoutType";
-import { MainLayoutProps } from "../../Layout/MainLayout/Types/MainLayoutProps";
+import { Routes } from "../../Utils/Routes";
 
 const GuestHomePage = (): React.ReactElement => {
     const layoutProps: MainLayoutProps = {
-        layoutType: MainLayoutType.Guest
+        layoutType: MainLayoutType.Guest,
+        currentPath: Routes.GuestHome,
+        breadcrumbPaths: null
     }
     return (
         <MainLayout props={layoutProps}>

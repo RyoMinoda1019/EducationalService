@@ -1,14 +1,17 @@
+import { useState } from "react";
+import { ClassroomListContext } from "../../Context/ClassroomListContext";
 import { MainLayout, MainLayoutProps } from "../../Layout/MainLayout";
 import { MainLayoutType } from "../../Layout/MainLayout/Consts/MainLayoutType";
 import { Routes } from "../../Utils/Routes";
+import { ClassroomDomain } from "../../Models/Domain/ClassroomDomain";
 
-const SettingPage = (): React.ReactElement => {
+const MemberClassPage = () => {
     const layoutProps: MainLayoutProps ={
         layoutType: MainLayoutType.Member,
-        currentPath: Routes.MemberSetting,
+        currentPath: Routes.MemberClassList,
         breadcrumbPaths: [
-            Routes.MemberSetting
-        ]
+            Routes.MemberClassList
+        ],
     }
     return (
         <MainLayout props={layoutProps}>
@@ -17,4 +20,4 @@ const SettingPage = (): React.ReactElement => {
     );
 }
 
-export default SettingPage;
+export default MemberClassPage;
